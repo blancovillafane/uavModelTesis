@@ -1,2 +1,2 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Info File="extractRPM.m" GroupUUID="" Icon="" Name="extractRPM" Type="Basic" Visible="1"/>
+<Info File="config/extractRPM.m" GroupUUID="" Icon="" Name="extractRPM" Type="Basic" Visible="1"/>
