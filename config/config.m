@@ -22,8 +22,8 @@ omega0  = 870;
 Cd      = 0.01;
 d       = [1,-1,1,-1]; % Rotor directions.
 
-aux         = (D*D*D*D)/(4*pi*pi);
-aux2        = -CQ*D/(CT*L);
+aux         = (pi*R*R)*(R*R)*(CT*L);
+aux2        = -CQ*R/(CT*L);
 propsMatrix = aux.*[ 1/L,            1/L,            1/L,            1/L;        ...
                     -sin(phi(1)),   -sin(phi(2)),   -sin(phi(3)),   -sin(phi(4));...
                     cos(phi(1)),    cos(phi(2)),    cos(phi(3)),    cos(phi(4)); ...
@@ -47,7 +47,7 @@ windSpeedInertial = [wx wy wz];
 % Initial conditions
 xe = 0;
 ye = 0;
-ze = 2;
+ze = -2;
 initialPositionInertial = [xe ye ze];
 
 u = 0;
