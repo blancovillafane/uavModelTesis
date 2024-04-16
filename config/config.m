@@ -4,8 +4,8 @@
 %------- Physical Parameters -------%
 prop.R    = 0.165;                   % [m]
 prop.D    = 2*prop.R;                % [m]
-prop.Area = pi*prop.R*prop.R;        % [m^2]
-prop.Lcm    = 1;                     % [m]
+prop.Area = pi*prop.R^2;             % [m^2]
+prop.Lcm  = 1;                       % [m]
 prop.phi  = [45,135,225,315].*(pi/180);   % Rotors angular position.
 prop.d    = [1,-1,1,-1];                  % Rotor directions.
 
@@ -52,19 +52,19 @@ wind.wz = 0;
 wind.Speed = [wind.wx wind.wy wind.wz];
 
 %------- Initial Conditions -------%
-initialState.PositionE = [0 0 -2]; % [pn pe pd]
+initialState.PositionE = [0 0 -2];     % [pn pe pd]
 
 initialState.VelocityB = [0 0 0];      % [ub vb wb]
 
 initialState.RatesB = [0 0 0];         % [p q r]
 
-initialState.EulerB = [0 0 0];       % [roll pitch yaw]
-
+initialState.EulerB = [0 0 0];         % [roll pitch yaw]
+  
 %------- References -------%
-reference.H = 0;
+ref.H = 0;
 
-reference.latitude = 0;
-reference.longitude = 0;
+ref.latitude = 0;
+ref.longitude = 0;
 
-reference.G = [reference.latitude ...
-               reference.longitude];
+ref.G = [ref.latitude ...
+         ref.longitude];
